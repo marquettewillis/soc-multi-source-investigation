@@ -44,9 +44,9 @@ Sysmon DNS query event logging (Event ID 22) was not enabled. Process evidence w
 
 The repository includes:
 
-- `Screenshots/` — Six screenshots showing the investigation and incident resolution.
-- `evidence/` — Exported Splunk CSV. The original Wireshark packet capture is retained privately.
-- `scripts/analyze_sysmon.py` — Python script used for basic log analysis.
+- Six `.png` screenshots — Investigation evidence and ServiceNow resolution.
+- `04_Splunk_PowerShell_Process_Evidence.csv` — Exported Sysmon process evidence.
+- `analyze_sysmon.py` — Python script used to analyze the CSV.
 
 Raw evidence and screenshots must be reviewed for sensitive information before public release.
 
