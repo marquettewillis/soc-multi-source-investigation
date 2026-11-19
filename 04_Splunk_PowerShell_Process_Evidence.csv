@@ -1,0 +1,2 @@
+"_time",host,EventCode,Image,ParentImage,ProcessId,ParentProcessId,CommandLine
+"2026-11-18T16:26:23.253-0800","SOC-WIN11",1,"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe","C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe",7784,5928,"""C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe"" -NoProfile -Command ""Resolve-DnsName example.com -Type A"""
