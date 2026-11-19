@@ -50,6 +50,46 @@ The repository includes:
 
 Raw evidence and screenshots must be reviewed for sensitive information before public release.
 
+
+## Investigation Evidence and Screenshots
+
+### 1. Wireshark — DNS Traffic Analysis
+
+Captured the DNS query and response for `example.com`, confirming communication between the Windows 11 lab endpoint and its DNS server.
+
+![Wireshark DNS Query and Response](01_Wireshark_DNS_Query_Response.png)
+
+### 2. Splunk — Sysmon Process Investigation
+
+Investigated Sysmon Event ID 1 to identify the PowerShell process, command-line arguments, and parent process information.
+
+![Splunk Sysmon Process Investigation](02_Splunk_Sysmon_PowerShell_Process.png)
+
+### 3. Microsoft Defender — Endpoint Investigation
+
+Verified the same PowerShell execution through Microsoft Defender for Endpoint. Correlated process ID 7784 and parent process ID 5928 with the Splunk evidence.
+
+![Microsoft Defender Endpoint Investigation](03_Defender_PowerShell_Activity.png)
+
+### 4. Python — Security Log Analysis
+
+Developed and executed a Python script to parse exported Splunk CSV evidence and extract the PowerShell command line.
+
+![Python Sysmon Log Analysis](04_Python_Sysmon_Log_Analysis.png)
+
+### 5. Microsoft Sentinel — KQL Log Analysis
+
+Used Kusto Query Language (KQL) to examine Azure administrative activity. This was a separate cloud audit-log exercise, not a direct correlation with the Windows endpoint event.
+
+![Microsoft Sentinel KQL Analysis](05_Sentinel_AzureActivity_KQL_Redacted.png)
+
+### 6. ServiceNow — Incident Resolution
+
+Documented the investigation, recorded supporting evidence, assessed the activity as authorized testing, and resolved incident INC0010001 without requiring containment or remediation.
+
+![ServiceNow Incident Resolution](06_ServiceNow_Incident_Resolution.png)
+
+
 ## Skills Demonstrated
 
 Security event investigation, SPL searching, KQL querying, process-tree analysis, DNS traffic inspection, Python CSV parsing, evidence documentation, and incident case management.
